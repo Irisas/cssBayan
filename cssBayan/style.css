@@ -8,12 +8,6 @@ body {
     margin: auto;
   }
   
-  .wrapper:hover,
-  .meme-label:hover,
-  .meme-picture:hover {
-    cursor: pointer;
-  }
-  
   .meme_container {
     max-width: 70%;
     margin: auto;
@@ -30,7 +24,7 @@ body {
   
   .meme-label {
     width: 100%;
-    padding: 10vw 0;
+    padding: 5% 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -44,6 +38,12 @@ body {
     transform-origin: 50% 0;
     transform: scaleY(0);
     transition: 1s;
+  }
+
+  .wrapper:hover,
+  .meme-label:hover,
+  .meme-picture:hover {
+    cursor: pointer;
   }
   
   .accordion-content {
@@ -87,9 +87,6 @@ body {
     .meme-picture:hover {
       background: url('down-arrows.png') no-repeat top 2% right;
     }
-  
-    .wrapper:hover .meme_container:active + .meme-label {
-      background: url('down-arrows.png') no-repeat top 2% right;
     }
   
     .wrapper:hover .accordion-content:checked + .meme-label {
@@ -97,11 +94,8 @@ body {
       background: url('down-arrows.png') no-repeat top 2% right;
     }
   
-    .wrapper:hover .meme_container:active > .meme-label {
-      color: rgb(241, 45, 110);
-      background: url('down-arrows.png') no-repeat top 2% right;
-    }
-  }
+    
+
   @media (max-width: 340px) {
     .title_text {
       font-size: 3em;
@@ -115,25 +109,22 @@ body {
   @media (max-width: 840px) {
    
     .title_text {
-      font-size: 2em;
-    }
-  
-    .meme_container {
-      font-size: 1.5em;
-    }
- 
-  }
-  
-  @media (max-width: 1900x) {
-  
-    .title_text {
       font-size: 2.5em;
     }
   
     .meme_container {
       font-size: 2em;
     }
+ 
   }
-
-
-
+  
+  @media (max-width: 1920px) {
+  
+    .title_text {
+      font-size: 2em;
+    }
+  
+    .meme_container {
+      font-size: 1.5em;
+    }
+  }
